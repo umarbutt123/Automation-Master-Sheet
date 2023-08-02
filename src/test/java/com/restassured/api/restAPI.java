@@ -17,7 +17,7 @@ public class restAPI {
 		RequestSpecification httpRequest = RestAssured.given(); 
 		Response response = httpRequest.request(Method.GET, "2");
 		 
-	//	System.out.println("Response=>" + response.prettyPrint());
+	
 		Assert.assertEquals(response.getStatusCode(), 200,"Correct status code returned");
 		
 		String contentType = response.header("Content-Type"); 
